@@ -3,52 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Basic SEO -->
-  <title>My First Semantic HTML Page</title>
-  <meta name="description" content="A simple web page created with semantic HTML5 for accessibility and SEO.">
+  <title>Enhanced HTML5 Page with Form</title>
+  <meta name="description" content="An HTML5 assignment demonstrating lists, tables, media, and a complete validated form.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      max-width: 900px;
+    }
+    header, main, footer {
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    table, th, td {
+      border: 1px solid #444;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input, select, textarea, button {
+      padding: 6px;
+      margin-top: 4px;
+      width: 100%;
+      max-width: 400px;
+    }
+    button {
+      background: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Page Header -->
+
   <header>
-    <h1>My Website Title</h1>
-    <nav aria-label="Main Navigation">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#articles">Articles</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Enhanced HTML5 Page</h1>
+    <p>This page demonstrates <strong>lists, tables, media,</strong> and a <strong>validated HTML5 form</strong>.</p>
   </header>
-  <!-- Main Content -->
+
   <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>This section introduces the page.</p>
+    <!-- Lists Section -->
+    <section>
+      <h2>Programming Languages I Like</h2>
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>PHP</li>
+      </ul>
+
+      <h2>Steps to Build a Web Page</h2>
+      <ol>
+        <li>Plan your content and structure</li>
+        <li>Write semantic HTML</li>
+        <li>Style with CSS</li>
+        <li>Add interactivity if needed</li>
+      </ol>
     </section>
 
-    <section id="articles">
-      <h2>Articles</h2>
-      <article>
-        <h3>Article One</h3>
-        <p>Short description of article one.</p>
-      </article>
-      <article>
-        <h3>Article Two</h3>
-        <p>Short description of article two.</p>
-      </article>
+    <!-- Table Section -->
+    <section>
+      <h2>Student Scores Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>Math</td>
+            <td>95</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>Science</td>
+            <td>88</td>
+          </tr>
+          <tr>
+            <td>Charlie</td>
+            <td>History</td>
+            <td>76</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email me at <a href="valeriannjoroge@gmail.com">Valerian Njoroge</a></p>
+    <!-- Media Section -->
+    <section>
+      <h2>Media Showcase</h2>
+      <figure>
+        <img src="https://via.placeholder.com/600x300" alt="Sample image">
+        <figcaption>A sample placeholder image</figcaption>
+      </figure>
+
+      <figure>
+        <audio controls>
+          <source src="sample-audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption>Sample audio</figcaption>
+      </figure>
+
+      <figure>
+        <video controls width="400">
+          <source src="sample-video.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <figcaption>Sample video</figcaption>
+      </figure>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post">
+        
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6">
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="kenya">Kenya</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+          </select>
+
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+
+          <label for="website">Personal Website:</label>
+          <input type="url" id="website" name="website" placeholder="https://example.com">
+        </fieldset>
+
+        <fieldset>
+          <legend>Feedback</legend>
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Your feedback here..."></textarea>
+        </fieldset>
+
+        <button type="submit">Submit Form</button>
+      </form>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Valerian Njoroge. All rights reserved.</p>
+    <p>&copy; 2025 Enhanced Form Assignment. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
